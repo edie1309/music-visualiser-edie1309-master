@@ -13,6 +13,11 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
  
    ellipse(540,500, circlesize)
    fill (255)
+ 
+   for(let i= 3; i < 4; i++){
+
+    circlesize( 20+i)
+   }
 
   
 
