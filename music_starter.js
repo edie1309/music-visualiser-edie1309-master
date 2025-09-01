@@ -2,23 +2,38 @@ var circlesize = 100
 // vocal, drum, bass, and other are volumes ranging from 0 to 100
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
   background(20)
-  textFont('Verdana'); // please use CSS safe fonts
+  textFont('Segoe UI'); // please use CSS safe fonts
   rectMode(CENTER)
-  textSize(24);
-  circlesize = map(vocal,0,100,100,600)
+  textSize(50);
+
+  display "words"
+  textAlign(CENTER);
+  textSize(vocal);
+  text(words, width/2, height/3);
+  
+  
+  circlesize = map(vocal,0,100,100,600) //vocalmap
   
   let bar_spacing = height / 10;
-   let bar_height = width / 12;
-   let bar_pos_x = width / 2;
+  let bar_height = width / 12;
+  let bar_pos_x = width / 2;
  
    ellipse(540,500, circlesize)
-   fill (255)
+   fill (255, 50)
+   stroke (250)
+   
  
-   for(let i= 3; i < 4; i++){
+   
+   
+   for(let i=0; i < 7; i++){
+    
+    ellipse( 540, 500, circlesize+(100*i))
 
-    circlesize( 20+i)
+
+
    }
-
+} 
+//this is the og one not on github i think
   
 
 
@@ -48,8 +63,4 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   // text("other", bar_pos_x, height / 2 + 4 * bar_spacing + 8);
  //  fill(255, 255, 0);
  
-   // display "words"
-  // textAlign(CENTER);
-  // textSize(vocal);
-  // text(words, width/2, height/3);
-}
+
