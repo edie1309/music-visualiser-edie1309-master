@@ -6,10 +6,10 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   rectMode(CENTER)
   textSize(50);
 
-  display "words"
-  textAlign(CENTER);
-  textSize(vocal);
-  text(words, width/2, height/3);
+  //display "words"
+  ///textAlign(CENTER);
+  //textSize(vocal);
+  //text(words, width/2, height/3);
   
   
   circlesize = map(vocal,0,100,100,600) //vocalmap
